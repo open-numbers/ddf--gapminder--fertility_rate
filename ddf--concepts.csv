@@ -1,0 +1,9 @@
+concept,concept_type,domain,name
+children_per_woman_total_fertility,measure,,Total Fertility Rate
+name,string,,Name
+geo,entity_domain,,Geo
+country,entity_set,geo,Country
+world_4region,entity_set,geo,four regions
+global,entity_set,geo,global
+domain,string,,Domain
+year,time,,Year
