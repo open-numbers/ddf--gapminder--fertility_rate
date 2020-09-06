@@ -3,77 +3,15 @@
     "language": {
         "id": "en"
     },
-    "created": "2018-03-29T01:56:17.384334+00:00",
+    "title": "ddf--gapminder--fertility_rate",
+    "description": "",
+    "author": "",
+    "license": "",
+    "created": "2020-09-06T02:34:15.511978+00:00",
     "resources": [
         {
-            "path": "ddf--entities--geo--global.csv",
-            "name": "ddf--entities--geo--global",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "global"
-                    },
-                    {
-                        "name": "name"
-                    }
-                ],
-                "primaryKey": "global"
-            }
-        },
-        {
-            "path": "ddf--datapoints--children_per_woman_total_fertility--by--world_4region--year.csv",
-            "name": "ddf--datapoints--children_per_woman_total_fertility--by--world_4region--year",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "world_4region"
-                    },
-                    {
-                        "name": "year"
-                    },
-                    {
-                        "name": "children_per_woman_total_fertility"
-                    }
-                ],
-                "primaryKey": [
-                    "world_4region",
-                    "year"
-                ]
-            }
-        },
-        {
-            "path": "ddf--entities--geo--country.csv",
-            "name": "ddf--entities--geo--country",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "country"
-                    },
-                    {
-                        "name": "name"
-                    }
-                ],
-                "primaryKey": "country"
-            }
-        },
-        {
-            "path": "ddf--entities--geo--world_4region.csv",
-            "name": "ddf--entities--geo--world_4region",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "world_4region"
-                    },
-                    {
-                        "name": "name"
-                    }
-                ],
-                "primaryKey": "world_4region"
-            }
-        },
-        {
-            "path": "ddf--concepts.csv",
             "name": "ddf--concepts",
+            "path": "ddf--concepts.csv",
             "schema": {
                 "fields": [
                     {
@@ -83,18 +21,18 @@
                         "name": "concept_type"
                     },
                     {
-                        "name": "domain"
+                        "name": "name"
                     },
                     {
-                        "name": "name"
+                        "name": "domain"
                     }
                 ],
                 "primaryKey": "concept"
             }
         },
         {
-            "path": "ddf--datapoints--children_per_woman_total_fertility--by--country--year.csv",
             "name": "ddf--datapoints--children_per_woman_total_fertility--by--country--year",
+            "path": "ddf--datapoints--children_per_woman_total_fertility--by--country--year.csv",
             "schema": {
                 "fields": [
                     {
@@ -114,8 +52,8 @@
             }
         },
         {
-            "path": "ddf--datapoints--children_per_woman_total_fertility--by--global--year.csv",
             "name": "ddf--datapoints--children_per_woman_total_fertility--by--global--year",
+            "path": "ddf--datapoints--children_per_woman_total_fertility--by--global--year.csv",
             "schema": {
                 "fields": [
                     {
@@ -133,10 +71,85 @@
                     "year"
                 ]
             }
+        },
+        {
+            "name": "ddf--datapoints--children_per_woman_total_fertility--by--world_4region--year",
+            "path": "ddf--datapoints--children_per_woman_total_fertility--by--world_4region--year.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "world_4region"
+                    },
+                    {
+                        "name": "year"
+                    },
+                    {
+                        "name": "children_per_woman_total_fertility"
+                    }
+                ],
+                "primaryKey": [
+                    "world_4region",
+                    "year"
+                ]
+            }
+        },
+        {
+            "name": "ddf--entities--geo--country",
+            "path": "ddf--entities--geo--country.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "country"
+                    },
+                    {
+                        "name": "name"
+                    }
+                ],
+                "primaryKey": "country"
+            }
+        },
+        {
+            "name": "ddf--entities--geo--global",
+            "path": "ddf--entities--geo--global.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "global"
+                    },
+                    {
+                        "name": "name"
+                    }
+                ],
+                "primaryKey": "global"
+            }
+        },
+        {
+            "name": "ddf--entities--geo--world_4region",
+            "path": "ddf--entities--geo--world_4region.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "world_4region"
+                    },
+                    {
+                        "name": "name"
+                    }
+                ],
+                "primaryKey": "world_4region"
+            }
         }
     ],
     "ddfSchema": {
         "concepts": [
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "concept_type",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            },
             {
                 "primaryKey": [
                     "concept"
@@ -154,15 +167,6 @@
                 "resources": [
                     "ddf--concepts"
                 ]
-            },
-            {
-                "primaryKey": [
-                    "concept"
-                ],
-                "value": "concept_type",
-                "resources": [
-                    "ddf--concepts"
-                ]
             }
         ],
         "entities": [
@@ -172,9 +176,9 @@
                 ],
                 "value": "name",
                 "resources": [
-                    "ddf--entities--geo--world_4region",
+                    "ddf--entities--geo--country",
                     "ddf--entities--geo--global",
-                    "ddf--entities--geo--country"
+                    "ddf--entities--geo--world_4region"
                 ]
             }
         ],
@@ -186,11 +190,12 @@
                 ],
                 "value": "children_per_woman_total_fertility",
                 "resources": [
-                    "ddf--datapoints--children_per_woman_total_fertility--by--global--year",
                     "ddf--datapoints--children_per_woman_total_fertility--by--country--year",
+                    "ddf--datapoints--children_per_woman_total_fertility--by--global--year",
                     "ddf--datapoints--children_per_woman_total_fertility--by--world_4region--year"
                 ]
             }
-        ]
+        ],
+        "synonyms": []
     }
 }
