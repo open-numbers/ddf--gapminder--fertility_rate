@@ -1,9 +1,9 @@
-concept,concept_type,name,domain
-children_per_woman_total_fertility,measure,Total Fertility Rate,
-name,string,Name,
-geo,entity_domain,Geo,
-country,entity_set,Country,geo
-world_4region,entity_set,four regions,geo
-global,entity_set,global,geo
-domain,string,Domain,
-year,time,Year,
+concept,name,concept_type,domain
+children_per_woman_total_fertility,Babies per woman,measure,
+geo,Geo,entity_domain,
+name,Name,string,
+time,Time,time,
+country,Country,entity_set,geo
+world_4region,four regions,entity_set,geo
+global,global,entity_set,geo
+domain,Domain,string,
