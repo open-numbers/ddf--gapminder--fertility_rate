@@ -39,6 +39,8 @@ def main():
             c_id = COLUMN_TO_CONCEPT[c]
             df.columns = [c_id]
             #serve_datapoint(df, OUT_DIR, c_id)
+            df.index.rename([sheet,'time'],inplace=True)
+            #print(df.index)
             df.to_csv(osp.join(OUT_DIR, 'ddf--datapoints--'+c_id+'--by--'+sheet+'.csv'))
 
    # Writing Geos/Regions/Global
