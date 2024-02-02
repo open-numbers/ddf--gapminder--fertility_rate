@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2024-02-01T21:28:17.005605+00:00",
+    "created": "2024-02-02T13:23:55.277039+00:00",
     "resources": [
         {
             "name": "ddf--concepts",
@@ -91,8 +91,8 @@
             }
         },
         {
-            "name": "ddf--entities--country",
-            "path": "ddf--entities--country.csv",
+            "name": "ddf--entities--geo--country",
+            "path": "ddf--entities--geo--country.csv",
             "schema": {
                 "fields": [
                     {
@@ -106,8 +106,8 @@
             }
         },
         {
-            "name": "ddf--entities--global",
-            "path": "ddf--entities--global.csv",
+            "name": "ddf--entities--geo--global",
+            "path": "ddf--entities--geo--global.csv",
             "schema": {
                 "fields": [
                     {
@@ -121,8 +121,8 @@
             }
         },
         {
-            "name": "ddf--entities--world_4region",
-            "path": "ddf--entities--world_4region.csv",
+            "name": "ddf--entities--geo--world_4region",
+            "path": "ddf--entities--geo--world_4region.csv",
             "schema": {
                 "fields": [
                     {
@@ -184,9 +184,9 @@
                 ],
                 "value": "name",
                 "resources": [
-                    "ddf--entities--country",
-                    "ddf--entities--global",
-                    "ddf--entities--world_4region"
+                    "ddf--entities--geo--country",
+                    "ddf--entities--geo--global",
+                    "ddf--entities--geo--world_4region"
                 ]
             },
             {
