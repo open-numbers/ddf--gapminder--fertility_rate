@@ -47,7 +47,7 @@ def main():
         geo_df = create_geo_domain(data)
         
         geo_df = geo_df.rename(columns={'geo':sheet})
-        geo_df.to_csv(osp.join(OUT_DIR, 'ddf--entities--'+sheet+'.csv'), index=False)
+        geo_df.to_csv(osp.join(OUT_DIR, 'ddf--entities--geo--'+sheet+'.csv'), index=False)
 
     measures.append((COLUMN_TO_CONCEPT[list(COLUMN_TO_CONCEPT.keys())[0]],list(COLUMN_TO_CONCEPT.keys())[0],'measure',''))
 
